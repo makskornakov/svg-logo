@@ -187,8 +187,8 @@
         --primary: var(--green);
         --supplement: var(--red);
 
-        --clipHorHalf: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
-        --clipVertHalf: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% to, 25% to);
+        --clipVertHalf: polygon(0 25%, to 25%, to 75%, 0 75%);
       }
 
       .path1 {
@@ -221,8 +221,18 @@
         animation-name: smoothColor2;
       }
 
+      <!-- 
+      So we need next types of animations initialy
+
+      2 color changes for both colors
+      2 X shaking animations (large and small) 
+      2 Y shaking animations (large and small) 
+      2 middle 50% polygon cips for Y and X 
+
+      all animations should be synchronized and be same-alternative
+      Shaking and clipping animations can differ from each other a little in time as well -->
       @keyframes smoothColor {
-        0% {
+        from {
           fill: var(--primary);
         }
         45% {
@@ -231,12 +241,12 @@
         55% {
           fill: var(--supplement);
         }
-        100% {
+        to {
           fill: var(--supplement);
         }
       }
       @keyframes smoothColor2 {
-        0% {
+        from {
           fill: var(--supplement);
         }
         45% {
@@ -245,12 +255,12 @@
         55% {
           fill: var(--primary);
         }
-        100% {
+        to {
           fill: var(--primary);
         }
       }
       @keyframes shakeX {
-        0% {
+        from {
           transform: translateX(0);
         }
 
@@ -275,12 +285,12 @@
           transform: translateX(0);
           clip-path: none;
         }
-        100% {
+        to {
           transform: translateX(0);
         }
       }
       @keyframes shakeX2 {
-        0% {
+        from {
           transform: translateX(0);
         }
 
@@ -305,12 +315,12 @@
           transform: translateX(0);
           clip-path: none;
         }
-        100% {
+        to {
           transform: translateX(0);
         }
       }
       @keyframes shakeX3 {
-        0% {
+        from {
           transform: translateX(0);
         }
 
@@ -335,12 +345,12 @@
           transform: translateX(0);
           clip-path: none;
         }
-        100% {
+        to {
           transform: translateX(0);
         }
       }
       @keyframes shakeY {
-        0% {
+        from {
           transform: translateY(0);
         }
         50% {
@@ -364,12 +374,12 @@
           transform: translateY(0);
           clip-path: none;
         }
-        100% {
+        to {
           transform: translateY(0);
         }
       }
       @keyframes shakeY2 {
-        0% {
+        from {
           transform: translateY(0);
         }
         51% {
@@ -393,7 +403,7 @@
           transform: translateY(0);
           clip-path: none;
         }
-        100% {
+        to {
           transform: translateY(0);
         }
       }

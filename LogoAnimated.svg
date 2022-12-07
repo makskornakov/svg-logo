@@ -9,23 +9,46 @@
         --green: #00ff00;
         --blue: #00ffff;
         --red: #ff0000;
+        --yellow: #ffff00;
+        --pink: #ed00b1;
 
-        --primary: var(--green);
-        --supplement: var(--red);
+        --primary: var(--blue);
+        --supplement: var(--pink);
 
-        --clipHorHalf: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
-        --clipVertHalf: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% to, 25% to);
+        --clipVertHalf: polygon(0 25%, to 25%, to 75%, 0 75%);
       }
-
       .cls-1 {
         fill: none;
       }
+      .path1 {
+        animation-name: shakeX;
+      }
+      .path2 {
+        animation-name: shakeX2;
+      }
+      .path3 {
+        animation-name: shakeX3;
+      }
+
+      .path1,
+      .path2,
+      .path3,
+      .cls-2,
       .cls-2 {
-        fill: #00ecff;
+        animation-timing-function: ease-in-out;
+        animation-duration: 6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+      }
+      .cls-2 {
+        fill: var(--primary);
       }
       .cls-3 {
-        fill: #ed00b1;
+        fill: var(--supplement);
       }
+      
     </style>
   </defs>
   <g id="logo">
