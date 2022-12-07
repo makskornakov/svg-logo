@@ -5,6 +5,18 @@
 >
   <defs>
     <style>
+      :root {
+        --green: #00ff00;
+        --blue: #00ffff;
+        --red: #ff0000;
+
+        --primary: var(--green);
+        --supplement: var(--red);
+
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+        --clipVertHalf: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
+      }
+
       .cls-1 {
         fill: none;
       }

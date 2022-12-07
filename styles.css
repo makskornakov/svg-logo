@@ -5,6 +5,9 @@
 
   --primary: var(--green);
   --supplement: var(--red);
+
+  --clipHorHalf: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  --clipVertHalf: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 .path1 {

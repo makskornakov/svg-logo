@@ -186,36 +186,39 @@
 
         --primary: var(--green);
         --supplement: var(--red);
+
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+        --clipVertHalf: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
       }
 
       .path1 {
-        animation: shakeX 7s infinite alternate;
+        animation-name: shakeX;
       }
       .path2 {
-        animation: shakeX2 7s infinite alternate;
+        animation-name: shakeX2;
       }
       .path3 {
-        animation: shakeX3 7s infinite alternate;
+        animation-name: shakeX3;
       }
 
       .path1,
       .path2,
-      .path3 {
+      .path3,
+      .cls-1,
+      .cls-2 {
         animation-timing-function: ease-in-out;
+        animation-duration: 6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
         animation-delay: 1s;
       }
       .cls-1 {
         fill: var(--primary);
-        animation: smoothColor 7s infinite alternate;
+        animation-name: smoothColor;
       }
       .cls-2 {
         fill: var(--supplement);
-        animation: smoothColor2 7s infinite alternate;
-      }
-      .cls-1,
-      .cls-2 {
-        animation-delay: 1s;
-        animation-timing-function: ease-in-out;
+        animation-name: smoothColor2;
       }
 
       @keyframes smoothColor {
@@ -253,9 +256,11 @@
 
         49% {
           transform: translateX(0);
+          clip-path: none;
         }
         49.5% {
           transform: translateX(-7px);
+          clip-path: var(--clipHorHalf);
         }
         50% {
           transform: translateX(+9px);
@@ -268,6 +273,7 @@
         }
         51.5% {
           transform: translateX(0);
+          clip-path: none;
         }
         100% {
           transform: translateX(0);
@@ -280,9 +286,11 @@
 
         50% {
           transform: translateX(0);
+          clip-path: none;
         }
         50.5% {
           transform: translateX(-4px);
+          clip-path: var(--clipHorHalf);
         }
         51% {
           transform: translateX(+4px);
@@ -295,6 +303,7 @@
         }
         52.5% {
           transform: translateX(0);
+          clip-path: none;
         }
         100% {
           transform: translateX(0);
@@ -307,9 +316,11 @@
 
         48% {
           transform: translateX(0);
+          clip-path: none;
         }
         48.5% {
           transform: translateX(+9px);
+          clip-path: var(--clipHorHalf);
         }
         49% {
           transform: translateX(-4px);
@@ -322,6 +333,7 @@
         }
         50.5% {
           transform: translateX(0);
+          clip-path: none;
         }
         100% {
           transform: translateX(0);
@@ -333,9 +345,11 @@
         }
         50% {
           transform: translateY(0);
+          clip-path: none;
         }
         50.5% {
           transform: translateY(-7px);
+          clip-path: var(--clipVertHalf);
         }
         51% {
           transform: translateY(+4px);
@@ -348,6 +362,7 @@
         }
         52.5% {
           transform: translateY(0);
+          clip-path: none;
         }
         100% {
           transform: translateY(0);
@@ -359,9 +374,11 @@
         }
         51% {
           transform: translateY(0);
+          clip-path: none;
         }
         51.5% {
           transform: translateY(+9px);
+          clip-path: var(--clipVertHalf);
         }
         52% {
           transform: translateY(-4px);
@@ -374,6 +391,7 @@
         }
         54.5% {
           transform: translateY(0);
+          clip-path: none;
         }
         100% {
           transform: translateY(0);
