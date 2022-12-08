@@ -16,38 +16,266 @@
         --primary: var(--blue);
         --supplement: var(--pink);
 
-        --clipHorHalf: polygon(25% 0, 75% 0, 75% to, 25% to);
-        --clipVertHalf: polygon(0 25%, to 25%, to 75%, 0 75%);
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+        --clipVertHalf: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
       }
       .cls-1 {
         fill: none;
       }
-      .path1 {
-        animation-name: shakeX;
-      }
-      .path2 {
-        animation-name: shakeX2;
-      }
-      .path3 {
-        animation-name: shakeX3;
-      }
 
-      .path1,
-      .path2,
-      .path3,
-      .cls-2,
-      .cls-2 {
+      #rb_long {
         animation-timing-function: ease-in-out;
         animation-duration: 6s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
         animation-delay: 1s;
+        animation-name: glitchXLeft;
       }
       .cls-2 {
         fill: var(--primary);
       }
       .cls-3 {
         fill: var(--supplement);
+      }
+
+      @keyframes glitchXLeftLarge {
+        from {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateX(-40%);
+          clip-path: var(--clipHorHalf);
+        }
+        50% {
+          transform: translateX(+10%);
+        }
+        51% {
+          transform: translateX(0);
+          clip-path: var(--clipHorHalf);
+        }
+        52% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateX(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchXLeftSmall {
+        from {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateX(-20%);
+          clip-path: var(--clipHorHalf);
+        }
+        50% {
+          transform: translateX(+10%);
+        }
+        51% {
+          transform: translateX(0);
+          clip-path: var(--clipHorHalf);
+        }
+        52% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateX(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchXRigthLarge {
+        from {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateX(40%);
+          clip-path: var(--clipHorHalf);
+        }
+        50% {
+          transform: translateX(-10%);
+        }
+        51% {
+          transform: translateX(0);
+          clip-path: var(--clipHorHalf);
+        }
+        52% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateX(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchXRigthSmall {
+        from {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateX(20%);
+          clip-path: var(--clipHorHalf);
+        }
+        50% {
+          transform: translateX(-10%);
+        }
+        51% {
+          transform: translateX(0);
+          clip-path: var(--clipHorHalf);
+        }
+        52% {
+          transform: translateX(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateX(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchYTopLarge {
+        from {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateY(-40%);
+          clip-path: var(--clipVertHalf);
+        }
+        50% {
+          transform: translateY(+10%);
+        }
+        51% {
+          transform: translateY(0);
+          clip-path: var(--clipVertHalf);
+        }
+        52% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateY(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchYTopSmall {
+        from {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateY(-20%);
+          clip-path: var(--clipVertHalf);
+        }
+        50% {
+          transform: translateY(+10%);
+        }
+        51% {
+          transform: translateY(0);
+          clip-path: var(--clipVertHalf);
+        }
+        52% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateY(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchYBottomLarge {
+        from {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateY(40%);
+          clip-path: var(--clipVertHalf);
+        }
+        50% {
+          transform: translateY(-10%);
+        }
+        51% {
+          transform: translateY(0);
+          clip-path: var(--clipVertHalf);
+        }
+        52% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateY(0);
+          clip-path: none;
+        }
+      }
+
+      @keyframes glitchYBottomSmall {
+        from {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        48% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        49% {
+          transform: translateY(20%);
+          clip-path: var(--clipVertHalf);
+        }
+        50% {
+          transform: translateY(-10%);
+        }
+        51% {
+          transform: translateY(0);
+          clip-path: var(--clipVertHalf);
+        }
+        52% {
+          transform: translateY(0);
+          clip-path: none;
+        }
+        to {
+          transform: translateY(0);
+          clip-path: none;
+        }
       }
     </style>
   </defs>
