@@ -183,6 +183,9 @@
         --green: #00ff00;
         --blue: #00ffff;
         --red: #ff0000;
+        --orange: #f55500;
+        --yellow: #ffff00;
+        --pink: #ed00b1;
 
         --primary: var(--green);
         --supplement: var(--red);

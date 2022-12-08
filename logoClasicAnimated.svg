@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><svg
+  id="_лой_1"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 220 100"
+>
+  <defs>
+    <style>
+      :root {
+        --red: #ff0000;
+        --orange: #f55500;
+        --yellow: #ffff00;
+        --green: #00ff00;
+        --blue: #00ffff;
+        --pink: #ed00b1;
+
+        --primary: var(--blue);
+
+        --clipHorHalf: polygon(25% 0, 75% 0, 75% to, 25% to);
+        --clipVertHalf: polygon(0 25%, to 25%, to 75%, 0 75%);
+      }
+      .cls-1 {
+        fill: var(--primary);
+        filter: hue-rotate(50deg);
+        animation: smoothColor 20s infinite;
+      }
+      @keyframes smoothColor {
+        from {
+          fill: rgb(255, 0, 0);
+        }
+        16.6% {
+          fill: rgb(255, 255, 0);
+        }
+        33.3% {
+          fill: rgb(0, 255, 0);
+        }
+        50% {
+          fill: rgb(0, 255, 255);
+        }
+        66.6% {
+          fill: rgb(28, 51, 255);
+        }
+        83.3% {
+          fill: rgb(255, 0, 255);
+        }
+        to {
+          fill: rgb(255, 0, 0);
+        }
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="50" cy="50" r="50" />
+  <circle class="cls-1" cx="170" cy="50" r="50" />
+</svg>
