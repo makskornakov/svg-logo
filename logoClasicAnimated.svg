@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><svg
-  id="_лой_1"
+  id="logoClasicAnimated"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 220 100"
 >
   <defs>
     <style>
       :root {
-        --red: #ff0000;
-        --orange: #f55500;
-        --yellow: #ffff00;
-        --green: #00ff00;
-        --blue: #00ffff;
-        --pink: #ed00b1;
-
-        --primary: var(--blue);
-
         --clipHorHalf: polygon(25% 0, 75% 0, 75% to, 25% to);
         --clipVertHalf: polygon(0 25%, to 25%, to 75%, 0 75%);
       }
       .cls-1 {
-        fill: var(--primary);
-        filter: hue-rotate(50deg);
-        animation: smoothColor 20s infinite;
+        fill: rgb(255, 0, 0);
+        animation: smoothColor 45s infinite;
       }
       @keyframes smoothColor {
         from {
