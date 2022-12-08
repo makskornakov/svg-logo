@@ -1,0 +1,19 @@
+{
+  "name": "svg-logo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url=./ --no-source-maps"
+  },
+  "keywords": [],
+  "author": "Max Kornakov",
+  "contributors": [
+    "Art Ginzburg"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.1"
+  }
+}
