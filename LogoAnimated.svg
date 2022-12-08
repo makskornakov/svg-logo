@@ -3,6 +3,7 @@
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 170 100"
 >
+  <!-- animation: name duration timing-function delay iteration-count direction fill-mode; -->
   <defs>
     <style>
       :root {
@@ -23,14 +24,25 @@
         fill: none;
       }
 
-      #rb_long {
+      .cls-3,
+      .cls-2 {
         animation-timing-function: ease-in-out;
         animation-duration: 6s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
         animation-delay: 1s;
-        animation-name: glitchXLeft;
       }
+
+      #fl_l_1 {
+        animation-name: glitchXLeftSmall;
+      }
+      #rb_long {
+        animation-name: glitchXRightLarge;
+      }
+      #fl_l_2 {
+        animation-name: glitchXLeftSmall;
+      }
+
       .cls-2 {
         fill: var(--primary);
       }
@@ -73,22 +85,22 @@
           transform: translateX(0);
           clip-path: none;
         }
-        48% {
+        48.5% {
           transform: translateX(0);
           clip-path: none;
         }
-        49% {
+        49.5% {
           transform: translateX(-20%);
           clip-path: var(--clipHorHalf);
         }
-        50% {
+        50.5% {
           transform: translateX(+10%);
         }
-        51% {
+        51.5% {
           transform: translateX(0);
           clip-path: var(--clipHorHalf);
         }
-        52% {
+        52.5% {
           transform: translateX(0);
           clip-path: none;
         }
@@ -98,27 +110,27 @@
         }
       }
 
-      @keyframes glitchXRigthLarge {
+      @keyframes glitchXRightLarge {
         from {
           transform: translateX(0);
           clip-path: none;
         }
-        48% {
+        47.5% {
           transform: translateX(0);
           clip-path: none;
         }
-        49% {
+        48.5% {
           transform: translateX(40%);
           clip-path: var(--clipHorHalf);
         }
-        50% {
+        49.5% {
           transform: translateX(-10%);
         }
-        51% {
+        50.5% {
           transform: translateX(0);
           clip-path: var(--clipHorHalf);
         }
-        52% {
+        51.5% {
           transform: translateX(0);
           clip-path: none;
         }
@@ -128,7 +140,7 @@
         }
       }
 
-      @keyframes glitchXRigthSmall {
+      @keyframes glitchXRightSmall {
         from {
           transform: translateX(0);
           clip-path: none;
@@ -193,22 +205,22 @@
           transform: translateY(0);
           clip-path: none;
         }
-        48% {
+        48.5% {
           transform: translateY(0);
           clip-path: none;
         }
-        49% {
+        49.5% {
           transform: translateY(-20%);
           clip-path: var(--clipVertHalf);
         }
-        50% {
+        50.5% {
           transform: translateY(+10%);
         }
-        51% {
+        51.5% {
           transform: translateY(0);
           clip-path: var(--clipVertHalf);
         }
-        52% {
+        52.5% {
           transform: translateY(0);
           clip-path: none;
         }
@@ -223,22 +235,22 @@
           transform: translateY(0);
           clip-path: none;
         }
-        48% {
+        47.5% {
           transform: translateY(0);
           clip-path: none;
         }
-        49% {
+        48.5% {
           transform: translateY(40%);
           clip-path: var(--clipVertHalf);
         }
-        50% {
+        49.5% {
           transform: translateY(-10%);
         }
-        51% {
+        50.5% {
           transform: translateY(0);
           clip-path: var(--clipVertHalf);
         }
-        52% {
+        51.5% {
           transform: translateY(0);
           clip-path: none;
         }
