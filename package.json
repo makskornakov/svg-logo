@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "source": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --public-url=./ --no-source-maps"
+    "start": "parcel",
+    "build": "parcel build --public-url=./ --no-source-maps"
   },
   "keywords": [],
   "author": "Max Kornakov",
