@@ -21,6 +21,12 @@ jobs:
       - name: Build 🔧 (with pre- and post- hooks)
         run: npm run build
 
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+
       - name: Setup git config
         run: |
           git config user.name github-actions
@@ -31,9 +37,3 @@ jobs:
 
       - name: Push changes
         run: git push
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: dist
