@@ -6,7 +6,10 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url=./ --no-source-maps"
+    "clean:output": "rm -rf ./dist",
+    "prebuild": "npm run clean:output && node ./scripts/prebuild.mjs ./README.md",
+    "build": "parcel build --public-url=./ --no-source-maps",
+    "postbuild": "node ./scripts/postbuild.mjs ./dist"
   },
   "keywords": [],
   "author": "Max Kornakov",
