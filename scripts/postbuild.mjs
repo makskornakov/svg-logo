@@ -36,8 +36,8 @@ await Promise.all([
 const filenamesToCreateSymlinks = filesInDirectory.filter(filename => path.basename(filename) !== 'index.html');
 await Promise.all(filenamesToCreateSymlinks.map((filename) => {
   const originalFilename = getOriginalFileName(filename);
-  console.log(`linking '${path.basename(filename)}' to '${originalFilename}'`);
-  return fs.symlink(path.basename(filename), originalFilename);
+  console.log(`copying '${filename}' to '${originalFilename}'`);
+  return fs.copyFile(filename, originalFilename);
 }))
 
 /**
