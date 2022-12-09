@@ -18,8 +18,19 @@ jobs:
         # It automatically lints before building, so devDependencies are required.
         run: pnpm i
 
-      - name: Build 🔧
-        run: pnpm build
+      - name: Build 🔧 (with pre- and post- hooks)
+        run: npm run build
+
+      - name: Setup git config
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+      - name: Commit changes
+        run: git commit -a -m "Update dist, Readme and symlinks"
+
+      - name: Push changes
+        run: git push
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
