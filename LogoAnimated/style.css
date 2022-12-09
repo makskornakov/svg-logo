@@ -47,9 +47,14 @@
 #rb_wall_3,
 #lt_wall_1,
 #lt_wall_2,
-#lt_wall_3 {
+#lt_wall_3,
+#text_1,
+#text_2,
+#text_3,
+#text_4,
+#text_5 {
   animation-timing-function: ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 7s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-delay: 1s;
@@ -93,14 +98,19 @@
 /* Small Y glitch up */
 #rb_wall_1,
 #rb_wall_2,
-#lt_wall_1 {
+#lt_wall_1,
+#text_1,
+#text_3,
+#text_5 {
   animation-name: glitchYTopSmall;
 }
 
 /* SMall Y glitch down */
 #rb_wall_3,
 #lt_wall_2,
-#lt_wall_3 {
+#lt_wall_3,
+#text_2,
+#text_4 {
   animation-name: glitchYBottomSmall;
 }
 
